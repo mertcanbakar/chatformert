@@ -17,7 +17,7 @@ export default function Chat() {
             <img
               src={data.user?.photoURL}
               alt="avatar"
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 object-cover rounded-full"
             />
             <span>{data.user?.displayName}</span>
           </div>

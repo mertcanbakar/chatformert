@@ -16,7 +16,7 @@ const Navbar = () => {
           <img
             src={currentUser.photoURL}
             alt="avatar photo"
-            className="w-8 rounded-full border border-zinc-300"
+            className="w-8 h-8 object-cover rounded-full border border-zinc-300"
           />
           <p className="text-zinc-500 text-xs">{currentUser.displayName}</p>
         </div>

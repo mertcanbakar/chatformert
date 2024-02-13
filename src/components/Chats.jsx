@@ -41,7 +41,7 @@ const Chats = () => {
             <img
               src={chat[1].userInfo.photoURL}
               alt="userAvatar"
-              className="w-8 h-8 rounded-full"
+              className="w-8 h-8 object-cover rounded-full"
             />
             <div className="userChatInfo">
               <span>{chat[1].userInfo.displayName}</span>

@@ -36,7 +36,8 @@ const Search = () => {
   };
 
   const handleKey = (e) => {
-    e.code === "Enter" && handleSearch();
+    e.preventDefault();
+    handleSearch();
   };
 
   const handleSelect = async () => {
@@ -80,16 +81,16 @@ const Search = () => {
   };
   return (
     <div className="w-full">
-      <div className="bg-red-600">
+      <form onSubmit={handleKey} className="flex gap-x-1">
         <input
           className="w-full p-2 outline-none border-b border-zinc-200 focus:border-zinc-400"
           type="text"
           placeholder="Bir kullanıcı ara"
-          onKeyDown={handleKey}
           onChange={(e) => setUsername(e.target.value)}
           value={username}
         />
-      </div>
+        <button type="submit">Ara</button>
+      </form>
       {err && <span>User not found!</span>}
       {user && (
         <div
@@ -99,7 +100,7 @@ const Search = () => {
           <img
             src={user.photoURL}
             alt="User Avatar"
-            className="w-8 rounded-full"
+            className="w-8 h-8 object-cover rounded-full"
           />
           <div className="userChatInfo">
             <span>{user.displayName}</span>

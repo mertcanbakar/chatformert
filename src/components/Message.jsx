@@ -31,7 +31,7 @@ const Message = ({ message }) => {
               : data.user.photoURL
           }
           alt=""
-          className="w-8 h-8 rounded-full border bg-red-300 border-zinc-300"
+          className="w-8 h-8 object-cover rounded-full border bg-red-300 border-zinc-300"
         />
         {/* <span className="text-sm text-center">just now</span> */}
       </div>
